@@ -1,0 +1,9 @@
+{
+  "short_name": "Mixed-Mui-Dialogs",
+  "name": "Mixed-Mui-Dialogs",
+  "icons": [
+  ],
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#000"
+}
