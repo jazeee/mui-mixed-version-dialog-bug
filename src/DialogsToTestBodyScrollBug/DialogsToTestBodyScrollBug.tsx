@@ -110,7 +110,16 @@ export const DialogsToTestBodyScrollBug = () => {
                     dialogStates[0].openDialog();
                     setTimeout(() => {
                       dialogStates[0].closeDialog();
-                      dialogStates[1].openDialog();
+                      setTimeout(() => {
+                        dialogStates[1].openDialog();
+                      },
+                        /**
+                         * waiting before opening the next dialog does also fix the bug, but
+                         * this delay appears to be dependent on Dialog animation.
+                         * Values of 190 msec or above works - intermittently
+                         */
+                        0
+                      );
                       setTimeout(() => {
                         dialogStates[1].closeDialog();
                       }, 2000);
